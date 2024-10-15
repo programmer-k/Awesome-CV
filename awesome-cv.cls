@@ -69,8 +69,8 @@
 % Needed to manage fonts
 \RequirePackage[quiet]{fontspec}
 % To support LaTeX quoting style
-\defaultfontfeatures{Ligatures=TeX}
-% \defaultfontfeatures{Path = /opt/texlive/2019/texmf-dist/fonts/opentype/public/fontawesome/}
+% \defaultfontfeatures{Ligatures=TeX}
+\defaultfontfeatures{Path = /opt/texlive/2024/texmf-dist/fonts/opentype/public/fontawesome/}
 % Needed to manage math fonts
 \RequirePackage{unicode-math}
 % Needed to use icons from font-awesome
