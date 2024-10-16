@@ -741,10 +741,10 @@
 \RequirePackage[ % BibLaTeX
 	sorting=ydnt, % Sorts entries by year (descending order), name, title
 	style=verbose,
-	doi=false,
+	doi=true,
 	isbn=true,
-	url=false,
-	eprint=false,
+	url=true,
+	eprint=true,
 	backref = false, % include back references in bibliography
 	maxcitenames=3, % affects only the citations in the document body
 	maxbibnames=99, % affects only the bibliography, pass 99 to print all
@@ -801,9 +801,11 @@
     \fontsize{8pt}{1em}\bodyfontlight\color{graytext}%
     \printfield{booktitle}%
     \setunit{\addcomma\space}%
-    \printfield{year}%
+    \printfield{note}
     \setunit{\addcomma\space}%
     \printlist{location}%
+    \\
+    \printfield{url}%
     \newunit%
   }
   \par\vspace{0.3\baselineskip}
@@ -842,8 +844,8 @@
     \printfield{note}%
     \setunit*{\addcomma\space}%
     \printfield{year}%
-    \setunit{\addcomma\space}%
-    \printlist{location}%
+    \\
+    \printfield{doi}%
     \newunit%
   }
   \par\vspace{0.3\baselineskip}
@@ -869,15 +871,13 @@
 }
 
 % New syntax for flexible backend (BibLaTeX > v3.3)
+
 \DeclareNameFormat{author}{%
   \fontsize{9pt}{1em}\bodyfont%
   \renewcommand*{\multinamedelim}{\addcomma\addspace}%
-  \nameparts{#1}%
   \ifthenelse{\value{listcount}=1}
-    {\ifblank{\namepartgiven}{}{\namepartgiven\space}%
-    \namepartfamily}%
-    {\ifblank{\namepartgiven}{}{\namepartgiven\space}%
-    \namepartfamily}%
+    {\ifblank{\namepartgiven}{}{\ifthenelse{\equal{\namepartgiven}{Jiun} \AND \equal{\namepartfamily}{Jeong}}{\underline{\namepartgiven\space\namepartfamily}}{\namepartgiven\space\namepartfamily}}}%
+    {\ifthenelse{\equal{\namepartgiven}{Jiun} \AND \equal{\namepartfamily}{Jeong}}{\underline{\namepartgiven\space\namepartfamily}}{\namepartgiven\space\namepartfamily}}%
   \ifthenelse{\value{listcount}<\value{liststop}}
   {\addcomma\space}
   {}
