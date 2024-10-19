@@ -801,6 +801,8 @@
     \fontsize{8pt}{1em}\bodyfontlight\color{graytext}%
     \printfield{booktitle}%
     \setunit{\addcomma\space}%
+    \printfield{pages}
+    \setunit{\addcomma\space}%
     \printfield{note}
     \setunit{\addcomma\space}%
     \printlist{location}%
