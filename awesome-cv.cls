@@ -87,7 +87,11 @@
   pdftitle={},
   pdfauthor={},
   pdfsubject={},
-  pdfkeywords={}
+  pdfkeywords={},
+  colorlinks=true,
+  %linkcolor=blue,
+  urlcolor=awesome-skyblue,
+  citecolor=blue,
 }
 
 
@@ -778,13 +782,14 @@
   \newblock%
   {%
     \fontsize{8pt}{1em}\bodyfontlight\color{graytext}%
-    \usebibmacro{journal+issuetitle}%
-    \setunit{\space}%
-    \printfield{pages}%
-    \newunit%
-    \printlist{publisher}%
-    \setunit*{\addcomma\space}%
-    \printfield{year}%
+    %\usebibmacro{journal+issuetitle}%
+    %\setunit{\space}%
+    %\printfield{pages}%
+    %\newunit%
+    %\printlist{publisher}%
+    %\setunit*{\addcomma\space}%
+    %\printfield{year}%
+    \printfield{note}%
     \newunit%
   }
   \par\vspace{0.3\baselineskip}
