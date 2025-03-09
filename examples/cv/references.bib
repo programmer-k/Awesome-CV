@@ -61,3 +61,17 @@ In Proceedings of Korea Computer Congress 2024 (KCC 2024)
 }
 %journal={IEEE Computer Architecture Letters},
 %  year={2024},
+
+@article{10876606,
+  author={Nam, Hyunwoo and Lee, Jay Hwan and Yang, Shinhyung and Kim, Yeonsoo and Jeong, Jiun and Kim, Jeonggeun and Burgstaller, Bernd},
+  journal={IEEE Computer Architecture Letters}, 
+  title={Comprehensive Design Space Exploration for Graph Neural Network Aggregation on GPUs}, 
+  year={2025},
+  volume={24},
+  number={1},
+  pages={45-48},
+  abstract={Graph neural networks (GNNs) have become the state-of-the-art technology for extracting and predicting data representations on graphs. With increasing demand to accelerate GNN computations, the GPU has become the dominant platform for GNN training and inference. GNNs consist of a compute-bound combination phase and a memory-bound aggregation phase. The memory access patterns of the aggregation phase remain a major performance bottleneck on GPUs, despite recent microarchitectural enhancements. Although GNN characterizations have been conducted to investigate this bottleneck, they did not reveal the impact of architectural modifications. However, a comprehensive understanding of improvements from such modifications is imperative to devise GPU optimizations for the aggregation phase. In this letter, we explore the GPU design space for aggregation by assessing the performance improvement potential of a series of architectural modifications. We find that the low locality of aggregation deteriorates performance with increased thread-level parallelism, and a significant enhancement follows memory access optimizations, which remain effective even with software optimization. Our analysis provides insights for hardware optimizations to significantly improve GNN aggregation on GPUs.},
+  keywords={Random access memory;Graphics processing units;Bandwidth;Vectors;Software;Optimization;Graph neural networks;Microarchitecture;Training;Computer science;Graph neural networks;graphics processing units;sensitivity analysis},
+  doi={10.1109/LCA.2025.3539371},
+  ISSN={1556-6064},
+  month={Jan},}
